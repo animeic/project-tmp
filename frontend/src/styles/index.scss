@@ -1,0 +1,88 @@
+
+// main.js->rest.css elem.css & viet.config.js->index.scss
+$--color-primary: #f56c6c;
+/* 改变 超小按钮 的大小 */
+$--button-mini-padding-vertical: 3px; // 纵向内边距 原始为7px
+$--button-mini-padding-horizontal: 5px; // 横向内边距 原始为15px
+$color1:green;
+
+$--el-button-bg-color: #e6bce3;
+
+
+
+// @import '~/element-plus/dist/index.css'
+
+// 根据视宽自动调整 与reset.css的font-size有关
+// 最小字号为12px rest.css body.font-size:12px，
+// 最大 20/18*0.81*19.8 = 17.82px  (width:1980)
+// 18px 相当于 1980屏幕 16px,根据 16/19.8得到系数，rest.css
+$defaultSize: 18 !default;
+@function rem($pxa){
+    @return calc($pxa / $defaultSize) * 1rem;
+}
+$fs: rem(14);
+$fm: rem(16);
+$fb: rem(20);
+$fl: rem(24);
+
+// 可现状最大和最小值
+$hh:rem(80);
+$header_height:rem(80);
+
+// 表单
+// max
+$max_form: rem(60);
+$max_input: rem(42);
+$max_form_limit: 42px;
+$max_input_limit: 30px;
+// small
+$small_form: rem(52);
+$small_input: rem(40);
+$small_form_limit: 40px;
+$small_input_limit: 30px;
+
+
+// 边框用于调试 调试代码t开头
+$tbr: 1px solid red;
+$tbb: 1px solid black;
+$tbg: 1px solid green;
+// 按钮边
+
+// 颜色
+$cm: #cc66cc;
+$dm: #1b6b4c;
+
+$bbr: 1px dashed $cm;
+
+// color
+// #fdf0ff
+// #fbe3ff
+// #e7b1f2
+// #d283e6
+// #bb59d9
+// #A233CC
+// #7e21a6
+// #5b1380
+// #3c0959
+
+// #fff0fc
+// #fff0fd
+// #f2e4f1
+// #e6bce3
+// #d98fd6
+// #CC66CC
+// #a34ba6
+// #7a3380
+// #531f59
+// #2e0f33
+
+// #e9f7ee
+// #ddebe2
+// #b8dec9
+// #8cd1ad
+// #64c496
+// #41B883
+// #2c9167
+// #1b6b4c
+// #0e4532
+

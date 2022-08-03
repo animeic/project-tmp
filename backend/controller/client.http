@@ -1,0 +1,62 @@
+@url = https://api.animeii.tech
+### 表单验证测试
+POST {{url}}/auth/sendCode
+Content-Type: application/json
+
+{
+    "etype": "register",
+    "email":"echopbla@gmail.com"
+}
+
+### 获取token
+GET  {{url}}/api/anime/auth/getTokenInfo
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NDAwNDQ1OTcsImp0aSI6IjQyZTA0NCIsImlzcyI6ImFwcCIsIm5iZiI6MTY0MDAwMDM5N30.Miai0lLJIL-CzQLp9-dtdmwp4pyi4f7vlEiv1Kr3Xpw
+
+{
+    "id": "42e044"
+}
+
+### 获取详情
+POST  {{url}}/article/detail
+Content-Type: application/json
+
+{
+    "id": 1
+}
+
+### 获取分页列表
+POST  {{url}}/article/list
+Content-Type: application/json
+
+{
+    "cur_page":1,
+    "page_size":3
+}
+
+
+### 编辑回显详情
+POST  {{url}}/admin/article/editDetail
+Content-Type: application/json
+
+{
+    "id":1
+}
+
+### 编辑回显详情
+POST  http://127.0.0.1:6000/admin/article/editDetail
+Content-Type: application/json
+
+{
+    "id":1
+}
+
+
+### 是否注册byname
+POST  {{url}}/test/isRegisterByName
+Content-Type: application/json
+
+{
+    "account":1,
+    "email":3
+}
